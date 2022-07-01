@@ -50,18 +50,18 @@ export DEBIAN_FRONTEND="noninteractive"
 # Declarando as variáveis utilizadas nas configurações de Rede do Servidor Ubuntu 
 #
 # Variável do Usuário padrão utilizado no Servidor Ubuntu desse curso
-USUARIODEFAULT="vaamonde"
+USUARIODEFAULT="informatica"
 #
 # Variável da Senha padrão utilizado no Servidor Ubuntu desse curso
 # OBSERVAÇÃO IMPORTANTE: essa variável será utilizada em outras variáveis desse curso
-SENHADEFAULT="pti@2018"
+SENHADEFAULT="aged@2022"
 #
 # Variável do Nome (Hostname) do Servidor Ubuntu desse curso
-NOMESERVER="ptispo01ws01"
+NOMESERVER="srvocsinv"
 #
 # Variável do Nome de Domínio do Servidor Ubuntu desse curso
 # OBSERVAÇÃO IMPORTANTE: essa variável será utilizada em outras variáveis desse curso
-DOMINIOSERVER="pti.intra"
+DOMINIOSERVER="aged.intra"
 #
 # Variável do Nome de Domínio NetBIOS do Servidor Ubuntu desse curso
 # OBSERVAÇÃO IMPORTANTE: essa variável será utilizada em outras variáveis desse curso
@@ -74,13 +74,13 @@ DOMINIONETBIOS="$(echo $DOMINIOSERVER | cut -d'.' -f1)"
 FQDNSERVER="$NOMESERVER.$DOMINIOSERVER"
 #
 # Variável do Endereço IPv4 principal (padrão) do Servidor Ubuntu desse curso
-IPV4SERVER="172.16.1.20"
+IPV4SERVER="172.21.100.19"
 #
 # Variável do Nome da Interface Lógica do Servidor Ubuntu Server desse curso
 # CUIDADO!!! o nome da interface de rede pode mudar dependendo da instalação do Ubuntu Server,
 # verificar o nome da interface com o comando: ip address show e mudar a variável INTERFACE com
 # o nome correspondente.
-INTERFACE="enp0s3"
+INTERFACE="ens18"
 #
 # Variável do arquivo de configuração da Placa de Rede do Netplan do Servidor Ubuntu
 # CUIDADO!!! o nome do arquivo de configuração da placa de rede pode mudar dependendo da 
@@ -189,10 +189,10 @@ PORTDHCP="67"
 DOMAIN=$DOMINIOSERVER
 #
 # Variável do nome da Pesquisa Reversa do Servidor de DNS
-DOMAINREV="1.16.172.in-addr.arpa"
+DOMAINREV="100.21.172.in-addr.arpa"
 #
 # Variável do endereço IPv4 da Subrede do Servidor de DNS
-NETWORK="172.16.1."
+NETWORK="172.21.100."
 #
 # Variável de instalação do serviço de rede Bind DNS Server
 DNSINSTALL="bind9 bind9utils bind9-doc dnsutils net-tools"
@@ -221,10 +221,10 @@ PORTRNDC="953"
 # 
 # Variável da senha em modo texto que está configurada nos arquivos: dhcpd.conf, named.conf.local
 # e rndc.key que será substituída pela nova chave criptografada da variável: USERUPDATE
-SECRETUPDATE="vaamonde"
+SECRETUPDATE="aged@2022"
 #
 # Variável da senha utilizada na criação da chave de atualização dos ponteiros do DNS e DHCP
-USERUPDATE="vaamonde"
+USERUPDATE="aged@2022"
 #
 # Variável das dependências do laço de loop da integração do Bind DNS e do ISC DHCP Server
 DHCPDNSDEP="isc-dhcp-server bind9"
@@ -252,7 +252,7 @@ DHCPDNSDEP="isc-dhcp-server bind9"
 NTPSERVER="a.st1.ntp.br"
 #
 # Variável do Zona de Horário do Ubuntu Server
-TIMEZONE="America/Sao_Paulo"
+TIMEZONE="America/Fortaleza"
 #
 # Variável de Configuração do Locale do Ubuntu Server
 LOCALE="pt_BR.UTF-8"
@@ -573,7 +573,7 @@ CREATE_TABLE_JAVAEE="CREATE TABLE contatos (
 # Variáveis utilizadas na geração das chaves privadas/públicas dos certificados do OpenSSL
 #
 # Variável da senha utilizada na geração das chaves privadas/públicas da CA e dos certificados
-PASSPHRASE="vaamonde"
+PASSPHRASE="aged@2022"
 #
 # Variável do tipo de criptografia da chave privada com as opções de: -aes128, -aes192, -aes256, 
 # -camellia128, -camellia192, -camellia256, -des, -des3 ou -idea, padrão utilizado: -aes256
