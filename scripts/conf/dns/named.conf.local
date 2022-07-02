@@ -20,11 +20,11 @@
 // Mais informações veja o script: 04-dhcpdns.sh (Integração do ISC DHCP e Bind9 DNS Server)
 key "rndc-key" {
 	algorithm hmac-md5;
-	secret "vaamonde";
+	secret "aged@2022";
 };
 
 // Configuração de Zona de Pesquisa Direta do Bind9 DNS Server
-zone "pti.intra" IN {
+zone "aged.intra" IN {
 	type master;
 	file "/var/lib/bind/pti.intra.hosts";
 	allow-update { key rndc-key; };
@@ -35,9 +35,9 @@ zone "pti.intra" IN {
 };
 
 // Configuração da Zona de Pesquisa Reversa do Bind9 DNS Server
-zone "1.16.172.in-addr.arpa" IN {
+zone "100.21.172.in-addr.arpa" IN {
 	type master;
-	file "/var/lib/bind/172.16.1.rev";
+	file "/var/lib/bind/172.21.100.rev";
 	allow-update { key rndc-key; };
 	allow-query { any; };
 	allow-transfer { none; };
