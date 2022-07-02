@@ -55,9 +55,9 @@ LOG="/var/log/$(echo $0 | cut -d'/' -f2)"
 #
 # Declarando as variáveis de PPA do Certbot e Domínio para a criação do certificado
 PPA="ppa:certbot/certbot"
-D1="pti.intra"
-D2="www.pti.intra"
-D3="ptispo01ws01.pti.intra"
+D1="aged.intra"
+D2="www.aged.intra"
+D3="srvocsinv.aged.intra"
 #
 # Exportando o recurso de Noninteractive do Debconf para não solicitar telas de configuração
 export DEBIAN_FRONTEND="noninteractive"
@@ -162,28 +162,28 @@ echo -e "Instalando o Certbot com suporte ao Apache2, aguarde..."
 echo -e "Certbot instalado com sucesso!!!, continuando com o script...\n"
 sleep 5
 #
-echo -e "Criando o Virtual Host do Domínio pti.intra no Apache2, aguarde..."
+echo -e "Criando o Virtual Host do Domínio aged.intra no Apache2, aguarde..."
 	# opção do comando: &>> (redirecionar a saída padrão)
 	# opção do comando mkdir: -v (verbose)
 	# opção do comando chown: -R (recursive), -v (verbose), www-data (user), www-data (group)
 	# opção do comando chmod: -R (recursive), -v (verbose), 755 (User=RWX,Group=R-X,Other=R-X)
 	# opção do comando cp: -v (verbose)
-	mkdir -v /var/www/html/pti.intra &>> $LOG
-	chown -Rv www-data:www-data /var/www/html/pti.intra &>> $LOG
-	chmod -Rv 755 /var/www/html/pti.intra &>> $LOG
-	cp -v conf/pti-intra.conf /etc/apache2/sites-available/pti-intra.conf &>> $LOG
+	mkdir -v /var/www/html/aged.intra &>> $LOG
+	chown -Rv www-data:www-data /var/www/html/aged.intra &>> $LOG
+	chmod -Rv 755 /var/www/html/aged.intra &>> $LOG
+	cp -v conf/aged-intra.conf /etc/apache2/sites-available/aged-intra.conf &>> $LOG
 echo -e "Virtual Host criado com sucesso!!!, continuando com o script...\n"
 sleep 5
 #
 echo -e "Editando o arquivo do Virtual Host do Apache2 pti-intra.conf, Pressione <Enter> para continuar."
 	read
-	vim /etc/apache2/sites-available/pti-intra.conf
+	nano /etc/apache2/sites-available/aged-intra.conf
 echo -e "Arquivo editado com sucesso!!!, continuando com o script...\n"
 sleep 5
 #
 echo -e "Habilitando o Virtual Host do Apache2, aguarde..."
 	# opção do comando: &>> (redirecionar a saída padrão)
-	a2ensite pti-intra.conf &>> $LOG
+	a2ensite aged-intra.conf &>> $LOG
 	a2dissite 000-default.conf &>> $LOG
 	apache2ctl configtest &>> $LOG
 echo -e "Virtual Host do Apache2 habilitado com sucesso!!!, continuando com o script...\n"
