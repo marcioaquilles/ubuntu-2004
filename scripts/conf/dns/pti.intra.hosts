@@ -25,9 +25,9 @@
 ; @ IN 	MX	10 mail = configuração do Mail Exchanger (registros de troca de e-mail) do domínio
 ; @ IN	TXT	"v=spf1 a mx -all" = registro de Texto com informações do SPF (Sender Policy Framework)
 
-$ORIGIN pti.intra.
+$ORIGIN aged.intra.
 $TTL 3600 ; 1 hour
-@		IN		SOA		ptispo01ws01.pti.intra. vaamonde.pti.intra. (
+@		IN		SOA		srvocsinv.aged.intra. informatica.aged.intra. (
 				1 ; serial
 				604800 ; refresh (1 week)
 				86400 ; retry (1 day)
@@ -35,39 +35,39 @@ $TTL 3600 ; 1 hour
 				604800 ; minimum (1 week)
 				)
 ;
-@               IN 		NS		ptispo01ws01.pti.intra.
+@               IN 		NS		srvocsinv.aged.intra.
 @               IN 		MX		10 mail
 @               IN		TXT		"v=spf1 a mx -all"
 ;
-pti.intra.      IN 		A 		172.16.1.20
-ptispo01ws01    IN 		A		172.16.1.20
-ptispo01fw01    IN 		A		172.16.1.254
-mail            IN 		A 		172.16.1.20
+aged.intra.      IN 		A 		172.16.1.20
+srvocsinv    IN 		A		172.16.1.20
+;ptispo01fw01    IN 		A		172.16.1.254
+mail            IN 		A 		172.21.100.19
 ;
-cloud           IN		CNAME	ptispo01ws01
-ftp             IN		CNAME	ptispo01ws01
-glpi9           IN		CNAME	ptispo01ws01
-glpi10          IN		CNAME	ptispo01ws01
-helpdesk        IN		CNAME	ptispo01ws01
-imap4           IN		CNAME	ptispo01ws01
-imap            IN		CNAME	ptispo01ws01
-loganalyzer     IN		CNAME	ptispo01ws01
-log             IN		CNAME	ptispo01ws01
-mysql           IN		CNAME	ptispo01ws01
-next            IN		CNAME	ptispo01ws01
-nfs             IN		CNAME	ptispo01ws01
-ntp             IN		CNAME	ptispo01ws01
-own             IN		CNAME	ptispo01ws01
-pop3            IN		CNAME	ptispo01ws01
-portal          IN		CNAME	ptispo01ws01
-pxe             IN		CNAME	ptispo01ws01
-smtp            IN		CNAME	ptispo01ws01
-ssh             IN		CNAME	ptispo01ws01
-suporte         IN		CNAME	ptispo01ws01
-tftp            IN		CNAME	ptispo01ws01
-webdav          IN		CNAME	ptispo01ws01
-wpad            IN		CNAME	ptispo01ws01
-wp              IN		CNAME	ptispo01ws01
-www             IN		CNAME	ptispo01ws01
-zm              IN		CNAME	ptispo01ws01
+cloud           IN		CNAME	srvocsinv
+ftp             IN		CNAME	srvocsinv
+glpi9           IN		CNAME	srvocsinv
+glpi10          IN		CNAME	srvocsinv
+helpdesk        IN		CNAME	srvocsinv
+imap4           IN		CNAME	srvocsinv
+imap            IN		CNAME	srvocsinv
+loganalyzer     IN		CNAME	srvocsinv
+log             IN		CNAME	srvocsinv
+mysql           IN		CNAME	srvocsinv
+next            IN		CNAME	srvocsinv
+nfs             IN		CNAME	srvocsinv
+ntp             IN		CNAME	srvocsinv
+own             IN		CNAME	srvocsinv
+pop3            IN		CNAME	srvocsinv
+portal          IN		CNAME	srvocsinv
+pxe             IN		CNAME	srvocsinv
+smtp            IN		CNAME	srvocsinv
+ssh             IN		CNAME	srvocsinv
+suporte         IN		CNAME	srvocsinv
+tftp            IN		CNAME	srvocsinv
+webdav          IN		CNAME	srvocsinv
+wpad            IN		CNAME	srvocsinv
+wp              IN		CNAME	srvocsinv
+www             IN		CNAME	srvocsinv
+zm              IN		CNAME	srvocsinv
 
