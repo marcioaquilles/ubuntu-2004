@@ -27,7 +27,7 @@
 
 $ORIGIN aged.intra.
 $TTL 3600 ; 1 hour
-@		IN		SOA		srvocsinv.aged.intra. informatica.aged.intra. (
+@		IN		SOA		srvphpipam.aged.intra. informatica.aged.intra. (
 				1 ; serial
 				604800 ; refresh (1 week)
 				86400 ; retry (1 day)
@@ -35,39 +35,39 @@ $TTL 3600 ; 1 hour
 				604800 ; minimum (1 week)
 				)
 ;
-@               IN 		NS		srvocsinv.aged.intra.
+@               IN 		NS		srvphpipam.aged.intra.
 @               IN 		MX		10 mail
 @               IN		TXT		"v=spf1 a mx -all"
 ;
-aged.intra.      IN 		A 		172.16.1.20
-srvocsinv    IN 		A		172.16.1.20
-;ptispo01fw01    IN 		A		172.16.1.254
-mail            IN 		A 		172.21.100.19
+aged.intra.     IN 		A 		172.16.1.62
+srvphpipam      IN 		A		172.16.1.62
+;ptispo01fw01   IN 		A		172.16.1.254
+mail            IN 		A 		172.21.100.62
 ;
-cloud           IN		CNAME	srvocsinv
-ftp             IN		CNAME	srvocsinv
-glpi9           IN		CNAME	srvocsinv
-glpi10          IN		CNAME	srvocsinv
-helpdesk        IN		CNAME	srvocsinv
-imap4           IN		CNAME	srvocsinv
-imap            IN		CNAME	srvocsinv
-loganalyzer     IN		CNAME	srvocsinv
-log             IN		CNAME	srvocsinv
-mysql           IN		CNAME	srvocsinv
-next            IN		CNAME	srvocsinv
-nfs             IN		CNAME	srvocsinv
-ntp             IN		CNAME	srvocsinv
-own             IN		CNAME	srvocsinv
-pop3            IN		CNAME	srvocsinv
-portal          IN		CNAME	srvocsinv
-pxe             IN		CNAME	srvocsinv
-smtp            IN		CNAME	srvocsinv
-ssh             IN		CNAME	srvocsinv
-suporte         IN		CNAME	srvocsinv
-tftp            IN		CNAME	srvocsinv
-webdav          IN		CNAME	srvocsinv
-wpad            IN		CNAME	srvocsinv
-wp              IN		CNAME	srvocsinv
-www             IN		CNAME	srvocsinv
-zm              IN		CNAME	srvocsinv
+cloud           IN		CNAME	srvphpipam
+ftp             IN		CNAME	srvphpipam
+glpi9           IN		CNAME	srvphpipam
+glpi10          IN		CNAME	srvphpipam
+helpdesk        IN		CNAME	srvphpipam
+imap4           IN		CNAME	srvphpipam
+imap            IN		CNAME	srvphpipam
+loganalyzer     IN		CNAME	srvphpipam
+log             IN		CNAME	srvphpipam
+mysql           IN		CNAME	srvphpipam
+next            IN		CNAME	srvphpipam
+nfs             IN		CNAME	srvphpipam
+ntp             IN		CNAME	srvphpipam
+own             IN		CNAME	srvphpipam
+pop3            IN		CNAME	srvphpipam
+portal          IN		CNAME	srvphpipam
+pxe             IN		CNAME	srvphpipam
+smtp            IN		CNAME	srvphpipam
+ssh             IN		CNAME	srvphpipam
+suporte         IN		CNAME	srvphpipam
+tftp            IN		CNAME	srvphpipam
+webdav          IN		CNAME	srvphpipam
+wpad            IN		CNAME	srvphpipam
+wp              IN		CNAME	srvphpipam
+www             IN		CNAME	srvphpipam
+zm              IN		CNAME	srvphpipam
 
