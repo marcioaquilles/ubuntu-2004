@@ -26,7 +26,7 @@
 ;
 $ORIGIN 100.21.172.in-addr.arpa.
 $TTL 3600 ; 1 hour
-@		IN		SOA		srvocsinv.aged.intra. informatica.aged.intra. (
+@		IN		SOA		srvphpipam.aged.intra. informatica.aged.intra. (
 				1 ; serial
 				604800 ; refresh (1 week)
 				86400 ; retry (1 day)
@@ -34,9 +34,9 @@ $TTL 3600 ; 1 hour
 				604800 ; minimum (1 week)
 				)
 ;
-@		IN		NS		srvocsinv.aged.intra.
+@		IN		NS		srvphpipam.aged.intra.
 @		IN		MX		10 mail.aged.intra.
 ;
-20		IN		PTR		srvocsinv.aged.intra.
-254		IN		PTR		srvocsinv.aged.intra.
+20		IN		PTR		srvphpipam.aged.intra.
+254		IN		PTR		srvphpipam.aged.intra.
 
